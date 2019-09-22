@@ -25,9 +25,6 @@ export class SocketIOServer {
     const toAddSocket = new SocketIOSocket(socket);
     toAddSocket.onDisconnect = () => this.Sockets.delete(toAddSocket);
     this.Sockets.add(toAddSocket);
-
-    // take care of callbacks
-
   }
 }
 

@@ -11,6 +11,9 @@ export class DeviceServer{
         this.server = net.createServer((socket: net.Socket) => this.onConnection(socket));
         this.udpSock = dgram.createSocket("udp4");
         this.connectedDevices = new Map<string, DeviceSocket>();
+        this.server.listen(port, () => {
+            console.log("Server is listening");
+        });
     }
 
     public requestDeviceConnection(address: string, port: number){
