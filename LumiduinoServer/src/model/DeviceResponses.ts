@@ -9,6 +9,13 @@ class DeviceMessage{
     }
 }
 
+export declare var informationResponse: {
+    name: string;
+    id: string;
+    deviceType: string;
+    functions: Map<string, Map<string, string>>;
+}
+
 export class DeviceInformationResponse extends DeviceMessage{
     public device_name: string;
     public device_type: string;
